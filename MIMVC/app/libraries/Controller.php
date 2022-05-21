@@ -18,6 +18,7 @@
         {
             // Check for view file
             if (file_exists('../app/views/' . $view . '.php')) {
+                // if it exists, require it
                 require_once '../app/views/' . $view . '.php';
             } else {
                 // View does not exist

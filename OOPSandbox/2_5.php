@@ -10,15 +10,17 @@
       $this->age = $age;
     }
 
+    // Getter
     public function getName(){
       return $this->name;
     }
 
+    // Setter
     public function setName($name){
       $this->name = $name;
     }
 
-    // __get MAGIC METHOD
+    // __get MAGIC METHOD (__)  -> Alternative to Getter/Setter
     public function __get($property){
       if(property_exists($this, $property)){
         return $this->$property;

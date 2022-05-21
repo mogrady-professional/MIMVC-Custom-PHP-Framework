@@ -1,4 +1,6 @@
 <?php
+// Static Methods and Properties
+
   class User {
     public $name;
     public $age;

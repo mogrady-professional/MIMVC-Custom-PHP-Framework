@@ -1,4 +1,6 @@
 <?php
+// Class Inheritance
+
   class User {
     protected $name;
     protected $age;

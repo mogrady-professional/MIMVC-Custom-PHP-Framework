@@ -1,6 +1,6 @@
 <?php
 
-class Pages {
+class Pages  extends Controller {
     public function __construct()
     {
         // echo 'Pages Constructor';
@@ -8,11 +8,22 @@ class Pages {
 
     public function index()
     {
-        echo 'Pages Index';
+        // Loaded by default
+
+        // echo 'Pages Index';
+        // $this -> view('pages/index'); // -> "View does not exist"
+        $data = [
+            'title' => 'Welcome'
+        ];
+
+        $this->view('pages/index', $data);
+
     }
 
-    public function about($id)
+
+    public function about()
     {
-        echo 'Pages About ' . $id;
+        // echo 'Pages About';
+        $this->view('pages/about');
     }
 }

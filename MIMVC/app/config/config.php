@@ -1,0 +1,11 @@
+<?php
+// App Root
+//echo dirname(dirname(__FILE__)); // MIMVC\app
+ define('APPROOT', dirname(dirname(__FILE__))); // Access App Root from any file
+ // URL Root
+    define('URLROOT', 'http://localhost/MIMVC'); // Access URL Root from any file
+    // Site Name
+    define('SITENAME', 'MIMVC Framework'); // Access Site Name from any file
+    // App Version
+    define('APPVERSION', '1.0.0'); // Access App Version from any file
+?>

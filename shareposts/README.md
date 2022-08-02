@@ -58,7 +58,7 @@ MIMVC
   - Create `posts` table
 
 ```sql
-CREATE TABLE `shareposts`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `shareposts`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 CREATE TABLE `shareposts`.`posts` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `title` VARCHAR(255) NOT NULL , `body` VARCHAR(255) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 ```
@@ -67,9 +67,12 @@ CREATE TABLE `shareposts`.`posts` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id`
   - `DB Parameters`
   - `App Root Parameters`
 
-## Creating a Controller (e.g. Users)
+# Deployment on Heroku
 
-- Create `Users.php` Controller in app/config/controllers
-  - Add Constructor and Method(s)
-    - URL is now accessable
-- Go to app/views and create folder called users and create view `register`
+- Add Procfile -> Congigure root directory
+- Add composer.json -> for Heroku to recognise it as a PHP application
+
+```
+mysql://b2a48b93061600:a7ab717c@eu-cdbr-west-02.cleardb.net/heroku_48b306d10c6009d?reconnect=true
+
+```
